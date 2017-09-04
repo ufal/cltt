@@ -3,7 +3,6 @@
 # Author: (c) 2017 Vincent Kriz <kriz@ufal.mff.cuni.cz>
 #
 
-import re
 import os
 import logging
 import argparse
@@ -144,10 +143,10 @@ def print_sentence(sentence):
 
     """
     # Header.
-    logging.info('')
-    logging.info('    +-%4s-+-%4s-+-%20s-++-%4s-+-%4s-+-%20s-++-%4s-+-%1s-+', '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 1)
-    logging.info('    | %4s | %4s | %20s || %4s | %4s | %20s || %4s | %1s |', 'E O', 'E P', 'E F', 'A O', 'A P', 'A F', 'GS', 'M')
-    logging.info('    +-%4s-+-%4s-+-%20s-++-%4s-+-%4s-+-%20s-++-%4s-+-%1s-+', '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 1)
+    logging.debug('')
+    logging.debug('    +-%4s-+-%4s-+-%20s-++-%4s-+-%4s-+-%20s-++-%4s-+-%1s-+', '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 1)
+    logging.debug('    | %4s | %4s | %20s || %4s | %4s | %20s || %4s | %1s |', 'E O', 'E P', 'E F', 'A O', 'A P', 'A F', 'GS', 'M')
+    logging.debug('    +-%4s-+-%4s-+-%20s-++-%4s-+-%4s-+-%20s-++-%4s-+-%1s-+', '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 1)
 
     # Tokens.
     for token in sentence:
@@ -155,13 +154,13 @@ def print_sentence(sentence):
         if token['a_ord'] > 0 and token['a_parent'] == token['gs_parent']:
             match = 'x'
 
-        logging.info('    | %4s | %4s | %20s || %4s | %4s | %20s || %4s | %s |',
-                     token['ord'], token['parent'], token['form'],
-                     token['a_ord'], token['a_parent'], token['a_form'],
-                     token['gs_parent'], match)
+        logging.debug('    | %4s | %4s | %20s || %4s | %4s | %20s || %4s | %s |',
+                      token['ord'], token['parent'], token['form'],
+                      token['a_ord'], token['a_parent'], token['a_form'],
+                      token['gs_parent'], match)
 
     # Footer.
-    logging.info('    +-%4s-+-%4s-+-%20s-++-%4s-+-%4s-+-%20s-++-%4s-+-%1s-+', '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 1)
+    logging.debug('    +-%4s-+-%4s-+-%20s-++-%4s-+-%4s-+-%20s-++-%4s-+-%1s-+', '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 4, '-' * 20, '-' * 4, '-' * 1)
 
 
 def get_gs_ev_alignment(evaluated_sentence, goldstandard_sentence):
@@ -178,8 +177,10 @@ def get_gs_ev_alignment(evaluated_sentence, goldstandard_sentence):
             ev_token = evaluated_sentence[ev_index]
             gs_token = goldstandard_sentence[gs_index]
         except IndexError:
-            logging.error('Check me :-)')
+            logging.error('Index problem')
             break
+
+        logging.debug('Aligning GS token %s', goldstandard_sentence[gs_index]['form'])
 
         if gs_token['form'] == ev_token['form']:
             ev_token['a_ord'] = gs_token['ord']
@@ -189,19 +190,39 @@ def get_gs_ev_alignment(evaluated_sentence, goldstandard_sentence):
             gs_index += 1
             ev_index += 1
         else:
+            # Try next ev tokens to match the current GS node.
+            found_ev_token = False
+            local_ev_index = ev_index + 1
+            while local_ev_index < len(evaluated_sentence):
+                if evaluated_sentence[local_ev_index]['form'] == goldstandard_sentence[gs_index]['form']:
+                    logging.debug(' --> GS token found in the EV sentence : %d/%s', local_ev_index, evaluated_sentence[local_ev_index]['form'])
+                    ev_index = local_ev_index
+                    found_ev_token = True
+                    break
+
+                local_ev_index += 1
+
+            if found_ev_token:
+                continue
+
+            # Otherwise, let's to the next GS token
             gs_index += 1
 
-            if ev_index >= len(evaluated_sentence):
-                continue
-
-            if gs_index >= len(goldstandard_sentence):
-                continue
-
-            while evaluated_sentence[ev_index]['form'] != goldstandard_sentence[gs_index]['form']:
-                ev_index += 1
-
-                if ev_index >= len(evaluated_sentence):
-                    break
+            # while evaluated_sentence[ev_index]['form'] != goldstandard_sentence[gs_index]['form']:
+            #     gs_index += 1
+            #     local_ev_index = ev_index
+            #
+            #     if local_ev_index >= len(evaluated_sentence):
+            #         continue
+            #
+            #     if gs_index >= len(goldstandard_sentence):
+            #         break
+            #
+            #     while evaluated_sentence[local_ev_index]['form'] != goldstandard_sentence[gs_index]['form']:
+            #         local_ev_index += 1
+            #
+            #         if local_ev_index >= len(evaluated_sentence):
+            #             break
 
     # Set alignment parents according to the ev2gs_mapping.
     for ev_token in evaluated_sentence:
@@ -215,7 +236,7 @@ def compare_sentences(gs_sentence, ev_sentence):
 
     """
     get_gs_ev_alignment(ev_sentence, gs_sentence)
-    # print_sentence(ev_sentence)
+    print_sentence(ev_sentence)
 
     correct_tokens = 0
     total_tokens = 0
@@ -281,9 +302,9 @@ if __name__ == "__main__":
             tokens_correct += n_correct_tokens
             tokens_total += n_total_tokens
 
-            logging.info('')
-            logging.info('-----------------------------')
-            logging.info('')
+            logging.debug('')
+            logging.debug('-----------------------------')
+            logging.debug('')
 
     logging.info('')
     logging.info('===================================')
