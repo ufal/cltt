@@ -13,7 +13,7 @@ from collections import defaultdict
 
 
 # Logging.
-logging.basicConfig(format='%(asctime)-15s [%(levelname)7s] %(funcName)s - %(message)s', level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)-15s [%(levelname)7s] %(funcName)s - %(message)s', level=logging.INFO)
 
 
 # Command line arguments.
@@ -191,10 +191,57 @@ def create_annotation_files(documents, node_offsets, entities, dictionary, brat_
                 output_file.write('\n')
 
 
+def filter_out_subentities(entities):
+    """
+    Filter out entities that are included in more specific ones.
+
+    """
+    filtered_entities = []
+    for candidate_entity in sorted(entities, key=lambda entity:len(entity['nodes']), reverse=True):
+        candidate_entity_nodes = set(candidate_entity['nodes'])
+
+        exists_more_specific_entity = False
+        for filtered_entity in filtered_entities:
+            filtered_entities_nodes = set(filtered_entity['nodes'])
+            if candidate_entity_nodes.issubset(filtered_entities_nodes):
+                exists_more_specific_entity = True
+                break
+
+        if not exists_more_specific_entity:
+            filtered_entities.append(candidate_entity)
+
+    logging.info('Number of entities after subentities filtering: %d', len(filtered_entities))
+    return filtered_entities
+
+
+def filter_out_noncontinous_entities(entities):
+    filtered_entities = []
+    for candidate_entity in entities:
+        continuous_entity = True
+
+        previous_ord = None
+        for node in candidate_entity['nodes']:
+            current_ord = int(re.sub(r'^.*node(\d+)$', r'\1', node))
+            if previous_ord and current_ord != previous_ord + 1:
+                continuous_entity = False
+                break
+            else:
+                previous_ord = current_ord
+
+        if continuous_entity:
+            filtered_entities.append(candidate_entity)
+
+    logging.info('Number of entities after continuous control: %d', len(filtered_entities))
+    return filtered_entities
+
+
+
 # Main.
 if __name__ == "__main__":
     dictionary, entity_types = load_dictionary(args.dictionary)
     entities = load_btred(args.btred_dir)
+    entities = filter_out_subentities(entities)
+    entities = filter_out_noncontinous_entities(entities)
     documents, node_offsets = load_pml(args.pml_dir)
-    # create_plaintext_files(documents, args.brat_dir)
+    create_plaintext_files(documents, args.brat_dir)
     create_annotation_files(documents, node_offsets, entities, dictionary, args.brat_dir)
