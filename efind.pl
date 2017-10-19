@@ -69,8 +69,12 @@ foreach my $file (@ARGV) {
 
         print STDERR "\n\tStarting querying\n";
 
+        my $query_filename = $file;
+        $query_filename =~ s/\///g;
+        $query_filename .= "-$id";
+
         ## Ulozim si dotaz do suboru
-        open(PMLTQ_FILE, ">/tmp/dotaz");
+        open(PMLTQ_FILE, ">/tmp/dotaz-$query_filename");
         binmode(PMLTQ_FILE, ":encoding(utf8)");
         print PMLTQ_FILE $pml;
         close(PMLTQ_FILE);
@@ -78,7 +82,7 @@ foreach my $file (@ARGV) {
         print STDERR system('echo $PERL5LIB');
 
         # my $perl_command = 'source /net/work/projects/perlbrew/init; eval "$(bash-complete setup)"; export PERL5LIB=""; perlbrew switch perl-5.22.1; export PERL5LIB="$HOME/treex/lib:$PERL5LIB"; which perl';
-        my $pmltq_command = "$PMLTQ_DIR/pmltq --btred --query-file /tmp/dotaz $file > $RESULTS/$prefix-$id.txt";
+        my $pmltq_command = "$PMLTQ_DIR/pmltq --btred --query-file /tmp/dotaz-$query_filename $file > $RESULTS/$prefix-$id.txt";
         print STDERR "Command 2 : $pmltq_command\n";
         my $output = system($pmltq_command);
         print STDERR "Vysledok  : $output\n";
