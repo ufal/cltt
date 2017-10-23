@@ -9,11 +9,11 @@ import argparse
 
 from cltt.accounting_dictionary import Dictionary
 from cltt.btred import load_detected_entities
-from cltt.pml import load_m_file
+from cltt.pml import load_m_file, put_entities_into_m_files
 from cltt.entities import put_entities_into_json, filter_fragmented_entities, filter_overlapping_entities
 
 # Logging.
-logging.basicConfig(format='%(asctime)-15s [%(levelname)7s] %(funcName)s - %(message)s', level=logging.DEBUG)
+logging.basicConfig(format='%(asctime)-15s [%(levelname)7s] %(funcName)s - %(message)s', level=logging.INFO)
 
 
 # Command line arguments.
@@ -56,13 +56,13 @@ if __name__ == "__main__":
         detected_entities = filter_overlapping_entities(detected_entities, document, accounting_dictionary)
 
         # Different outputs
-        cltt_m_filename = '%s/%s.json' % (args.json, document_id)
-        final_entities = put_entities_into_json(document, detected_entities, accounting_entities, cltt_m_filename)
+        json_filename = '%s/%s.json' % (args.json, document_id)
+        final_entities = put_entities_into_json(document, detected_entities, accounting_entities, json_filename)
 
         # if args.brat:
         #     create_plaintext_files(documents, args.brat)
         #     create_annotation_files(documents, node_offsets, entities, accounting_entities, args.brat)
-        #
-        # if args.pml:
-        #     create_pml_files(documents, final_entities, args.cltt, args.pml)
 
+        if args.pml:
+            cltt_m_filename_with_entities = '{}/{}.m'.format(args.pml, document_id)
+            put_entities_into_m_files(final_entities, accounting_dictionary, cltt_m_filename, cltt_m_filename_with_entities)

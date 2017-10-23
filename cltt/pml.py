@@ -3,14 +3,17 @@
 import logging
 import re
 
+from collections import defaultdict
 
-def put_entities_into_m_files(detected_entities, pml_input_filepath, pml_output_filepath):
+
+def put_entities_into_m_files(detected_entities, accounting_dictionary, pml_input_filepath, pml_output_filepath):
     """Load the M-file, append entities annotation, save the file."""
 
+    # Index detected entities according to the node_id.
     node2entity_id = dict()
     for entity in detected_entities:
         for node_id in entity['node_ids']:
-            node2entity_id[node_id] = {'entity_id': entity['entity_id'], 'entity_type': entity['entity_type']}
+            node2entity_id[node_id] = entity
 
     # Read M file and change identifiers according to mapping
     with open(pml_input_filepath, 'r') as m_file_input:
@@ -25,7 +28,97 @@ def put_entities_into_m_files(detected_entities, pml_input_filepath, pml_output_
                         cltt_annotation = []
                         cltt_annotation.append("      <cltt_entity_id>%s</cltt_entity_id>\n" % node2entity_id[node_id]['entity_id'])
                         cltt_annotation.append("      <cltt_entity_type>%s</cltt_entity_type>\n" % node2entity_id[node_id]['entity_type'])
-                        m_file_output.write(''.join(cltt_annotation))
+                        cltt_annotation.append("      <cltt_entity_dictionary_id>%s</cltt_entity_dictionary_id>\n" % node2entity_id[node_id]['dictionary_id'])
+                        cltt_annotation.append("      <cltt_entity_dictionary_form>%s</cltt_entity_dictionary_form>\n" % accounting_dictionary.dictionary[node2entity_id[node_id]['dictionary_id']]['entity_form'])
+                        line = ''.join(cltt_annotation)
+                        line = line.encode('utf8')
+                        m_file_output.write(line)
+
+
+def _find_root_node(dictionary_entry):
+    for node_index in range(len(dictionary_entry['dependency_tree'])):
+        if dictionary_entry['dependency_tree'][node_index]['parent'] == 0:
+            return node_index
+
+
+def put_relations_into_m_files(relations, accounting_dictionary, pml_input_filepath, pml_output_filepath):
+    """Load the M-file, append relations annotation, save the file."""
+
+    relation_data = defaultdict(list)
+
+    for relation in relations:
+        # Subject nodes data.
+        for node_id in relation['subject']['node_ids']:
+            dictionary_entry = accounting_dictionary.dictionary[relation['object']['dictionary_id']]
+            root_object_node = _find_root_node(dictionary_entry)
+            relation_data[node_id].append({
+                'id': relation['relation_id'],
+                'type': relation['relation_type'],
+                'subpart': 'subject',
+                'subject': '',
+                'predicate': relation['predicate']['node_ids'][0],
+                'object': relation['object']['node_ids'][root_object_node]
+            })
+
+        # Predicate nodes data.
+        for node_id in relation['predicate']['node_ids']:
+            dictionary_entry = accounting_dictionary.dictionary[relation['subject']['dictionary_id']]
+            root_subject_node = _find_root_node(dictionary_entry)
+
+            dictionary_entry = accounting_dictionary.dictionary[relation['object']['dictionary_id']]
+            root_object_node = _find_root_node(dictionary_entry)
+
+            relation_data[node_id].append({
+                'id': relation['relation_id'],
+                'type': relation['relation_type'],
+                'subpart': 'predicate',
+                'subject': relation['subject']['node_ids'][root_subject_node],
+                'predicate': '',
+                'object': relation['object']['node_ids'][root_object_node]
+            })
+
+        # Object nodes data.
+        for node_id in relation['object']['node_ids']:
+            dictionary_entry = accounting_dictionary.dictionary[relation['subject']['dictionary_id']]
+            root_subject_node = _find_root_node(dictionary_entry)
+
+            relation_data[node_id].append({
+                'id': relation['relation_id'],
+                'type': relation['relation_type'],
+                'subpart': 'object',
+                'subject': relation['subject']['node_ids'][root_subject_node],
+                'predicate': relation['predicate']['node_ids'][0],
+                'object': ''
+            })
+
+    # Read M file and change identifiers according to mapping
+    with open(pml_input_filepath, 'r') as m_file_input:
+        with open(pml_output_filepath, 'w') as m_file_output:
+            for line in m_file_input:
+                m_file_output.write(line)
+
+                m_node_match = re.match(r'\s*<m id="m-(?P<node_id>.*)">', line)
+                if m_node_match:
+                    node_id = m_node_match.group('node_id')
+                    if relation_data[node_id]:
+                        cltt_annotation = []
+                        cltt_annotation.append("      <cltt_relations>\n")
+
+                        for relation in relation_data[node_id]:
+                            cltt_annotation.append("         <cltt_relation>\n")
+                            cltt_annotation.append("             <cltt_relation_id>%s</cltt_relation_id>\n" % relation['id'])
+                            cltt_annotation.append("             <cltt_relation_type>%s</cltt_relation_type>\n" % relation['type'])
+                            cltt_annotation.append("             <cltt_relation_subpart>%s</cltt_relation_subpart>\n" % relation['subpart'])
+                            cltt_annotation.append("             <cltt_relation_subject_reference>%s</cltt_relation_subject_reference>\n" % relation['subject'])
+                            cltt_annotation.append("             <cltt_relation_predicate_reference>%s</cltt_relation_predicate_reference>\n" % relation['predicate'])
+                            cltt_annotation.append("             <cltt_relation_object_reference>%s</cltt_relation_object_reference>\n" % relation['object'])
+                            cltt_annotation.append("         </cltt_relation>\n")
+
+                        cltt_annotation.append("      </cltt_relations>\n")
+
+                        line = ''.join(cltt_annotation)
+                        line = line.encode('utf8')
+                        m_file_output.write(line)
 
 
 def load_m_file(pml_m_filepath):

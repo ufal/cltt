@@ -9,7 +9,8 @@ import json
 import logging
 import argparse
 
-from cltt.pml import load_m_file
+from cltt.accounting_dictionary import Dictionary
+from cltt.pml import load_m_file, put_relations_into_m_files
 from cltt.brat import load_ann_file
 from cltt.entities import load_detected_entities
 from cltt.relations import RelationBuilder
@@ -22,11 +23,13 @@ logging.basicConfig(format='%(asctime)-15s [%(levelname)7s] %(funcName)s - %(mes
 # Command line arguments.
 parser = argparse.ArgumentParser()
 parser.description = 'Merge automatically detected entities with manually detected relations.'
+parser.add_argument('--dictionary', required=True, help='Accounting Dictionary (JSON file)')
 parser.add_argument('--brat', required=True, help='Brat files with manual annotation')
 parser.add_argument('--entities', required=True, help='Automatically detected entities')
 parser.add_argument('--cltt', required=True, help='CLTT PML files.')
 parser.add_argument('--json', required=True, help='Relation description output directory.')
-# parser.add_argument('--pml', required=False, default=None, help='CLTT PML files directory.')
+parser.add_argument('--elayer', required=False, default=None, help='PML files with entities annotation.')
+parser.add_argument('--rlayer', required=False, default=None, help='PML files with relation annotation.')
 # parser.add_argument('--brat', required=False, default=None, help='Brat files output.')
 # parser.add_argument('--output_dir', required=True, help='directory with the final merged ANN files')
 args = parser.parse_args()
@@ -34,6 +37,11 @@ args = parser.parse_args()
 
 # Main.
 if __name__ == "__main__":
+    # Accounting Dictionary.
+    accounting_dictionary = Dictionary()
+    accounting_dictionary.load_json(args.dictionary)
+    accounting_entities, entity_types = accounting_dictionary.dictionary, accounting_dictionary.entity_types
+
     document_ids = [document[:-2] for document in sorted(os.listdir(args.cltt)) if document[-2:] == '.m']
     for document_id in document_ids:
         logging.info('Processing document %s :', document_id)
@@ -59,3 +67,7 @@ if __name__ == "__main__":
         json_r_filename = '{}/{}.json'.format(args.json, document_id)
         relation_builder.save_json(json_r_filename)
 
+        if args.elayer:
+            input_pml_file = '{}/{}.m'.format(args.elayer, document_id)
+            output_pml_file = '{}/{}.m'.format(args.rlayer, document_id)
+            put_relations_into_m_files(relation_builder.relations, accounting_dictionary, input_pml_file, output_pml_file)

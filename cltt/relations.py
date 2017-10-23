@@ -44,6 +44,10 @@ class RelationBuilder(object):
 
                 logging.debug(' --> entity %s', detected_entity['dictionary_id'])
                 self.annotated_to_detected_mapping[annotated_entity_id] = detected_entity_id
+                break
+
+            if annotated_entity_id not in self.annotated_to_detected_mapping:
+                logging.info('Cannot align annotated entity %r', annotated_entity)
 
     def get_annotated_entity(self, entity_id):
         """Find annotated entity with the specified ID."""
@@ -156,6 +160,7 @@ class RelationBuilder(object):
                 logging.info('             : %s', ', '.join(self.get_detected_entity(subject_detected_entity_id)['node_ids']) if subject_detected_entity_id else '')
                 logging.info(' - predicate : %s', predicate_annotated_entity['text'])
                 logging.info(' - object    : %s', object_annotated_entity['text'])
+                logging.info('             : %s', object_annotated_entity['id'])
                 logging.info('             : %s', object_detected_entity_id)
                 logging.info('             : %s', ', '.join(self.get_detected_entity(object_detected_entity_id)['node_ids']) if object_detected_entity_id else '')
 

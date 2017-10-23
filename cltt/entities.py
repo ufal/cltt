@@ -13,6 +13,7 @@ def load_detected_entities(e_file):
 
         for entity in entities:
             entity['text_chunk_form'] = entity['text_chunk_form'].encode('utf8')
+            logging.debug('Detected entity: %r', entity)
 
     return entities
 
@@ -47,6 +48,8 @@ def put_entities_into_json(document, detected_entities, accounting_dictionary, o
 
     with open(output_e_file, 'w') as exported_json:
         json.dump(entities, exported_json, ensure_ascii=False)
+
+    return entities
 
 
 def filter_overlapping_entities(entities, document, accounting_dictionary):
