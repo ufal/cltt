@@ -140,8 +140,9 @@ def load_m_file(pml_m_filepath):
 
         for line in pml_data:
             line = line.decode('utf-8')
+            logging.debug('Input line = %s', line)
 
-            sentence_match = re.match(r'^\s+<s .*', line)
+            sentence_match = re.match(r'\s*<s .*', line)
             if sentence_match:
                 if tokens:
                     logging.debug('Sentence end. Number of nodes: %d. Offset: %d', len(tokens), char_offset)
@@ -150,13 +151,15 @@ def load_m_file(pml_m_filepath):
                     sentences.append(list(tokens))
                 tokens = []
 
-            node_id_match = re.match(r'^\s+<m id="m-(?P<node_id>.*)">', line)
+            node_id_match = re.match(r"\s*<m id=[\"']m-(a-)?(?P<node_id>.*)[\"']>", line)
             if node_id_match:
                 node_id = node_id_match.group('node_id')
+                logging.debug('Extracted node id = %s', node_id)
 
-            node_form_match = re.match(r'^\s+<form>(?P<node_form>.*)</form>', line)
+            node_form_match = re.match(r"\s*<form>(?P<node_form>.*)</form>", line)
             if node_form_match:
                 node_form = node_form_match.group('node_form')
+                logging.debug('Extracted node form = %s', node_form)
 
             if node_id and node_form:
                 start_offset = char_offset if not tokens else char_offset + 1
@@ -171,7 +174,7 @@ def load_m_file(pml_m_filepath):
         if tokens:
             sentences.append(tokens)
 
-    logging.info('Loaded %4d sentences from document %s', len(sentences), document_id)
+    logging.info('Loaded %d sentences from document %s', len(sentences), document_id)
     document = {
         'document_id': document_id,
         'sentences': sentences,

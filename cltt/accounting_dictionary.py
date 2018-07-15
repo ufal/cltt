@@ -90,7 +90,7 @@ class Dictionary(object):
             self.dictionary = data['entries']
             self.entity_types = data['entity_types']
 
-        logging.info('Number of loaded entities: %d', len(self.dictionary))
+        logging.info('Number of loaded dictionary entries: %d', len(self.dictionary))
 
     def save_json(self, filepath):
         """Load dictionary from XML."""
