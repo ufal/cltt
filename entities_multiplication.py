@@ -80,9 +80,13 @@ if __name__ == "__main__":
 
                     multiplicated_entities.append(multiplicated_entity)
 
+        # Encode forms into UTF-8.
+        for multiplicated_entity in multiplicated_entities:
+            multiplicated_entity['text_chunk_form'] = multiplicated_entity['text_chunk_form'].encode('utf8')
+
         # Create json-elayer file.
         json_filename = '{}/{}.json'.format(args.json, document_id)
-        json.dump(multiplicated_entities, open(json_filename, 'w'), sort_keys=True, indent=4, separators=(',', ': '))
+        json.dump(multiplicated_entities, open(json_filename, 'w'), ensure_ascii=False, sort_keys=True, indent=4, separators=(',', ': '))
 
         # Create pml-elayer file.
         pml_m_filename = '{}/{}.m'.format(args.pml, document_id)
