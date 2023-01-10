@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pml_schema
+  xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/"
+  version="1.1">
+  <revision>2.0.0</revision>
+  <description>CLTT analytical trees</description>
+  <reference name="mdata" readas="dom"/>
+  <reference name="wdata" readas="dom"/>
+
+  <import schema="pml_schema_a.xml"/>
+
+  <derive type="a-node.type">
+    <structure>
+      <!-- Data structures for manuall annotation -->
+      <member name="co_parent.rf"><cdata format="PMLREF"/></member>
+      <member name="co_parent.lemma"><cdata format="any"/></member>
+      <member name="co_parent.tree"><cdata format="any"/></member>
+      <member name="co_parent.sent"><cdata format="any"/></member>
+      <member name="comment"><cdata format="any"/></member>
+      <member name="spy_afun"><cdata format="any"/></member>
+      <member name="spy_move"><cdata format="any"/></member>
+    </structure>
+  </derive>
+
+</pml_schema>

@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adata xmlns="http://ufal.mff.cuni.cz/pdt/pml/">
+  <head>
+    <schema href="pml_schema_a_cltt.xml" />
+    <references>
+      <reffile id="m" name="mdata" href="document_02_008.m" />
+      <reffile id="w" name="wdata" href="document_02_008.w" />
+    </references>
+  </head>
+  <meta>
+    <annotation_info>
+      <desc>MST parser output</desc>
+    </annotation_info>
+  </meta>
+  <trees>
+    <LM id="a-document_02_008-sentence1">
+      <s.rf>m#m-document_02_008-sentence1</s.rf>
+      <ord>0</ord>
+      <children>
+        <LM id="a-document_02_008-sentence1-node55">
+          <m.rf>m#m-document_02_008-sentence1-node55</m.rf>
+          <afun>Coord</afun>
+          <ord>55</ord>
+          <children>
+            <LM id="a-document_02_008-sentence1-node30">
+              <m.rf>m#m-document_02_008-sentence1-node30</m.rf>
+              <afun>Pred</afun>
+              <is_member>1</is_member>
+              <ord>30</ord>
+              <children>
+                <LM id="a-document_02_008-sentence1-node27">
+                  <m.rf>m#m-document_02_008-sentence1-node27</m.rf>
+                  <afun>Coord</afun>
+                  <ord>27</ord>
+                  <children>
+                    <LM id="a-document_02_008-sentence1-node2">
+                      <m.rf>m#m-document_02_008-sentence1-node2</m.rf>
+                      <afun>Sb</afun>
+                      <is_member>1</is_member>
+                      <ord>2</ord>
+                      <children id="a-document_02_008-sentence1-node1">
+                        <m.rf>m#m-document_02_008-sentence1-node1</m.rf>
+                        <afun>Atr</afun>
+                        <ord>1</ord>
+                      </children>
+                      <spy_move> (a-zakon.iso-008-p57s2W14-Tm;a-> a-zakon.iso-008-p57s2W27-Tm;a)</spy_move>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node3">
+                      <m.rf>m#m-document_02_008-sentence1-node3</m.rf>
+                      <afun>AuxX</afun>
+                      <ord>3</ord>
+                      <spy_move> (a-zakon.iso-008-p57s2W14-Tm;a-> a-zakon.iso-008-p57s2W27-Tm;a)</spy_move>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node6">
+                      <m.rf>m#m-document_02_008-sentence1-node6</m.rf>
+                      <afun>Sb</afun>
+                      <is_member>1</is_member>
+                      <ord>6</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence1-node4">
+                          <m.rf>m#m-document_02_008-sentence1-node4</m.rf>
+                          <afun>Atr</afun>
+                          <ord>4</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node5">
+                          <m.rf>m#m-document_02_008-sentence1-node5</m.rf>
+                          <afun>Atr</afun>
+                          <ord>5</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node9">
+                          <m.rf>m#m-document_02_008-sentence1-node9</m.rf>
+                          <afun>Atr</afun>
+                          <ord>9</ord>
+                          <children>
+                            <LM id="a-document_02_008-sentence1-node7">
+                              <m.rf>m#m-document_02_008-sentence1-node7</m.rf>
+                              <afun>AuxX</afun>
+                              <ord>7</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node8">
+                              <m.rf>m#m-document_02_008-sentence1-node8</m.rf>
+                              <afun>Sb</afun>
+                              <ord>8</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node11">
+                              <m.rf>m#m-document_02_008-sentence1-node11</m.rf>
+                              <afun>Obj</afun>
+                              <ord>11</ord>
+                              <children id="a-document_02_008-sentence1-node10">
+                                <m.rf>m#m-document_02_008-sentence1-node10</m.rf>
+                                <afun>Atr</afun>
+                                <ord>10</ord>
+                              </children>
+                            </LM>
+                          </children>
+                        </LM>
+                      </children>
+                      <spy_move> (a-zakon.iso-008-p57s2W14-Tm;a-> a-zakon.iso-008-p57s2W27-Tm;a)</spy_move>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node12">
+                      <m.rf>m#m-document_02_008-sentence1-node12</m.rf>
+                      <afun>AuxX</afun>
+                      <ord>12</ord>
+                      <spy_move> (a-zakon.iso-008-p57s2W17-Tm;nebo-> a-zakon.iso-008-p57s2W9-Tm;mají) (a-zakon.iso-008-p57s2W9-Tm;mají-> a-zakon.iso-008-p57s2W27-Tm;a)</spy_move>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node17">
+                      <m.rf>m#m-document_02_008-sentence1-node17</m.rf>
+                      <afun>Coord</afun>
+                      <is_member>1</is_member>
+                      <ord>17</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence1-node14">
+                          <m.rf>m#m-document_02_008-sentence1-node14</m.rf>
+                          <afun>Coord</afun>
+                          <is_member>1</is_member>
+                          <ord>14</ord>
+                          <children>
+                            <LM id="a-document_02_008-sentence1-node13">
+                              <m.rf>m#m-document_02_008-sentence1-node13</m.rf>
+                              <afun>Sb</afun>
+                              <is_member>1</is_member>
+                              <ord>13</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node16">
+                              <m.rf>m#m-document_02_008-sentence1-node16</m.rf>
+                              <afun>Sb</afun>
+                              <is_member>1</is_member>
+                              <ord>16</ord>
+                              <children id="a-document_02_008-sentence1-node15">
+                                <m.rf>m#m-document_02_008-sentence1-node15</m.rf>
+                                <afun>Atr</afun>
+                                <ord>15</ord>
+                              </children>
+                            </LM>
+                          </children>
+                          <spy_move> (a-zakon.iso-008-p57s2W17-Tm;nebo-> a-zakon.iso-008-p57s2W27-Tm;a) (a-zakon.iso-008-p57s2W27-Tm;a-> a-zakon.iso-008-p57s2W17-Tm;nebo)</spy_move>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node19">
+                          <m.rf>m#m-document_02_008-sentence1-node19</m.rf>
+                          <afun>Sb</afun>
+                          <is_member>1</is_member>
+                          <ord>19</ord>
+                          <children>
+                            <LM id="a-document_02_008-sentence1-node18">
+                              <m.rf>m#m-document_02_008-sentence1-node18</m.rf>
+                              <afun>Atr</afun>
+                              <ord>18</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node22">
+                              <m.rf>m#m-document_02_008-sentence1-node22</m.rf>
+                              <afun>Atr</afun>
+                              <ord>22</ord>
+                              <children>
+                                <LM id="a-document_02_008-sentence1-node20">
+                                  <m.rf>m#m-document_02_008-sentence1-node20</m.rf>
+                                  <afun>AuxX</afun>
+                                  <ord>20</ord>
+                                </LM>
+                                <LM id="a-document_02_008-sentence1-node21">
+                                  <m.rf>m#m-document_02_008-sentence1-node21</m.rf>
+                                  <afun>Sb</afun>
+                                  <ord>21</ord>
+                                </LM>
+                                <LM id="a-document_02_008-sentence1-node25">
+                                  <m.rf>m#m-document_02_008-sentence1-node25</m.rf>
+                                  <afun>Pnom</afun>
+                                  <ord>25</ord>
+                                  <children>
+                                    <LM id="a-document_02_008-sentence1-node23">
+                                      <m.rf>m#m-document_02_008-sentence1-node23</m.rf>
+                                      <afun>Atr</afun>
+                                      <ord>23</ord>
+                                    </LM>
+                                    <LM id="a-document_02_008-sentence1-node24">
+                                      <m.rf>m#m-document_02_008-sentence1-node24</m.rf>
+                                      <afun>Atr</afun>
+                                      <ord>24</ord>
+                                    </LM>
+                                  </children>
+                                </LM>
+                              </children>
+                            </LM>
+                          </children>
+                        </LM>
+                      </children>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node26">
+                      <m.rf>m#m-document_02_008-sentence1-node26</m.rf>
+                      <afun>AuxX</afun>
+                      <ord>26</ord>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node29">
+                      <m.rf>m#m-document_02_008-sentence1-node29</m.rf>
+                      <afun>Sb</afun>
+                      <is_member>1</is_member>
+                      <ord>29</ord>
+                      <children id="a-document_02_008-sentence1-node28">
+                        <m.rf>m#m-document_02_008-sentence1-node28</m.rf>
+                        <afun>Atr</afun>
+                        <ord>28</ord>
+                      </children>
+                      <spy_move> (a-zakon.iso-008-p57s2W30-Tm;mohou-> a-zakon.iso-008-p57s2W27-Tm;a)</spy_move>
+                    </LM>
+                  </children>
+                </LM>
+                <LM id="a-document_02_008-sentence1-node31">
+                  <m.rf>m#m-document_02_008-sentence1-node31</m.rf>
+                  <afun>Obj</afun>
+                  <ord>31</ord>
+                  <children id="a-document_02_008-sentence1-node32">
+                    <m.rf>m#m-document_02_008-sentence1-node32</m.rf>
+                    <afun>Obj</afun>
+                    <ord>32</ord>
+                  </children>
+                </LM>
+                <LM id="a-document_02_008-sentence1-node33">
+                  <m.rf>m#m-document_02_008-sentence1-node33</m.rf>
+                  <afun>AuxP</afun>
+                  <ord>33</ord>
+                  <children id="a-document_02_008-sentence1-node34">
+                    <m.rf>m#m-document_02_008-sentence1-node34</m.rf>
+                    <afun>Adv</afun>
+                    <ord>34</ord>
+                    <children id="a-document_02_008-sentence1-node38">
+                      <m.rf>m#m-document_02_008-sentence1-node38</m.rf>
+                      <afun>Coord</afun>
+                      <ord>38</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence1-node35">
+                          <m.rf>m#m-document_02_008-sentence1-node35</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>35</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node36">
+                          <m.rf>m#m-document_02_008-sentence1-node36</m.rf>
+                          <afun>AuxP</afun>
+                          <ord>36</ord>
+                          <children id="a-document_02_008-sentence1-node37">
+                            <m.rf>m#m-document_02_008-sentence1-node37</m.rf>
+                            <afun>Atr</afun>
+                            <is_member>1</is_member>
+                            <ord>37</ord>
+                            <spy_afun> (Obj -> Atr)</spy_afun>
+                          </children>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node39">
+                          <m.rf>m#m-document_02_008-sentence1-node39</m.rf>
+                          <afun>AuxP</afun>
+                          <ord>39</ord>
+                          <children id="a-document_02_008-sentence1-node40">
+                            <m.rf>m#m-document_02_008-sentence1-node40</m.rf>
+                            <afun>Atr</afun>
+                            <is_member>1</is_member>
+                            <ord>40</ord>
+                            <children id="a-document_02_008-sentence1-node41">
+                              <m.rf>m#m-document_02_008-sentence1-node41</m.rf>
+                              <afun>Atr</afun>
+                              <ord>41</ord>
+                              <spy_move> (a-zakon.iso-008-p57s2W42-Tm;,-> a-zakon.iso-008-p57s2W40-Tm;znění)</spy_move>
+                              <spy_afun> (ExD -> Atr)</spy_afun>
+                            </children>
+                            <spy_afun> (Adv -> Atr)</spy_afun>
+                          </children>
+                        </LM>
+                      </children>
+                      <spy_move> (a-zakon.iso-008-p57s2W63-Tm;,-> a-zakon.iso-008-p57s2W34-Tm;zákona č. 563/1991 Sb.)</spy_move>
+                      <spy_afun> (AuxX -> Coord)</spy_afun>
+                    </children>
+                  </children>
+                </LM>
+                <LM id="a-document_02_008-sentence1-node43">
+                  <m.rf>m#m-document_02_008-sentence1-node43</m.rf>
+                  <afun>AuxC</afun>
+                  <ord>43</ord>
+                  <children>
+                    <LM id="a-document_02_008-sentence1-node42">
+                      <m.rf>m#m-document_02_008-sentence1-node42</m.rf>
+                      <afun>AuxX</afun>
+                      <ord>42</ord>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node52">
+                      <m.rf>m#m-document_02_008-sentence1-node52</m.rf>
+                      <afun>Adv</afun>
+                      <ord>52</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence1-node46">
+                          <m.rf>m#m-document_02_008-sentence1-node46</m.rf>
+                          <afun>Sb</afun>
+                          <ord>46</ord>
+                          <children>
+                            <LM id="a-document_02_008-sentence1-node44">
+                              <m.rf>m#m-document_02_008-sentence1-node44</m.rf>
+                              <afun>Atr</afun>
+                              <ord>44</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node45">
+                              <m.rf>m#m-document_02_008-sentence1-node45</m.rf>
+                              <afun>Atr</afun>
+                              <ord>45</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node47">
+                              <m.rf>m#m-document_02_008-sentence1-node47</m.rf>
+                              <afun>AuxP</afun>
+                              <ord>47</ord>
+                              <children id="a-document_02_008-sentence1-node51">
+                                <m.rf>m#m-document_02_008-sentence1-node51</m.rf>
+                                <afun>Atr</afun>
+                                <ord>51</ord>
+                                <children>
+                                  <LM id="a-document_02_008-sentence1-node48">
+                                    <m.rf>m#m-document_02_008-sentence1-node48</m.rf>
+                                    <afun>Atr</afun>
+                                    <ord>48</ord>
+                                  </LM>
+                                  <LM id="a-document_02_008-sentence1-node49">
+                                    <m.rf>m#m-document_02_008-sentence1-node49</m.rf>
+                                    <afun>Atr</afun>
+                                    <ord>49</ord>
+                                  </LM>
+                                  <LM id="a-document_02_008-sentence1-node50">
+                                    <m.rf>m#m-document_02_008-sentence1-node50</m.rf>
+                                    <afun>Atr</afun>
+                                    <ord>50</ord>
+                                  </LM>
+                                </children>
+                              </children>
+                            </LM>
+                          </children>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node53">
+                          <m.rf>m#m-document_02_008-sentence1-node53</m.rf>
+                          <afun>Obj</afun>
+                          <ord>53</ord>
+                          <children id="a-document_02_008-sentence1-node54">
+                            <m.rf>m#m-document_02_008-sentence1-node54</m.rf>
+                            <afun>Atr</afun>
+                            <ord>54</ord>
+                          </children>
+                        </LM>
+                      </children>
+                    </LM>
+                  </children>
+                  <spy_move> (a-zakon.iso-008-p57s2W55-Tm;;-> a-zakon.iso-008-p57s2W30-Tm;mohou)</spy_move>
+                </LM>
+              </children>
+              <spy_move> (a-zakon.iso-008-p57s2W35-Tm;,-> a-zakon.iso-008-p57s2;) (a-zakon.iso-008-p57s2;-> a-zakon.iso-008-p57s2W55-Tm;;)</spy_move>
+              <spy_afun> (Pred -> Pred)</spy_afun>
+            </LM>
+            <LM id="a-document_02_008-sentence1-node60">
+              <m.rf>m#m-document_02_008-sentence1-node60</m.rf>
+              <afun>Pred</afun>
+              <is_member>1</is_member>
+              <ord>60</ord>
+              <children>
+                <LM id="a-document_02_008-sentence1-node56">
+                  <m.rf>m#m-document_02_008-sentence1-node56</m.rf>
+                  <afun>Adv</afun>
+                  <ord>56</ord>
+                </LM>
+                <LM id="a-document_02_008-sentence1-node57">
+                  <m.rf>m#m-document_02_008-sentence1-node57</m.rf>
+                  <afun>AuxT</afun>
+                  <ord>57</ord>
+                </LM>
+                <LM id="a-document_02_008-sentence1-node58">
+                  <m.rf>m#m-document_02_008-sentence1-node58</m.rf>
+                  <afun>AuxP</afun>
+                  <ord>58</ord>
+                  <children id="a-document_02_008-sentence1-node59">
+                    <m.rf>m#m-document_02_008-sentence1-node59</m.rf>
+                    <afun>Obj</afun>
+                    <ord>59</ord>
+                  </children>
+                </LM>
+                <LM id="a-document_02_008-sentence1-node61">
+                  <m.rf>m#m-document_02_008-sentence1-node61</m.rf>
+                  <afun>Sb</afun>
+                  <ord>61</ord>
+                  <children>
+                    <LM id="a-document_02_008-sentence1-node67">
+                      <m.rf>m#m-document_02_008-sentence1-node67</m.rf>
+                      <afun>Coord</afun>
+                      <ord>67</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence1-node62">
+                          <m.rf>m#m-document_02_008-sentence1-node62</m.rf>
+                          <afun>Atr</afun>
+                          <is_member>1</is_member>
+                          <ord>62</ord>
+                          <children id="a-document_02_008-sentence1-node64">
+                            <m.rf>m#m-document_02_008-sentence1-node64</m.rf>
+                            <afun>AuxP</afun>
+                            <ord>64</ord>
+                            <children>
+                              <LM id="a-document_02_008-sentence1-node63">
+                                <m.rf>m#m-document_02_008-sentence1-node63</m.rf>
+                                <afun>AuxX</afun>
+                                <ord>63</ord>
+                                <spy_move> (a-zakon.iso-008-p57s2W80-Tm;,-> a-zakon.iso-008-p57s2W61-Tm;ustanovení) (a-zakon.iso-008-p57s2W61-Tm;ustanovení-> a-zakon.iso-008-p57s2W67-Tm;a) (a-zakon.iso-008-p57s2W67-Tm;a-> a-zakon.iso-008-p57s2W64-Tm;o)</spy_move>
+                              </LM>
+                              <LM id="a-document_02_008-sentence1-node65">
+                                <m.rf>m#m-document_02_008-sentence1-node65</m.rf>
+                                <afun>Atr</afun>
+                                <ord>65</ord>
+                                <spy_afun> (Obj -> Atr)</spy_afun>
+                              </LM>
+                            </children>
+                            <spy_move> (a-zakon.iso-008-p57s2W61-Tm;ustanovení-> a-zakon.iso-008-p57s2W62-Tm;zákona č. 563/1991 Sb.)</spy_move>
+                          </children>
+                          <spy_move> (a-zakon.iso-008-p57s2W60-Tm;vztahují-> a-zakon.iso-008-p57s2W61-Tm;ustanovení) (a-zakon.iso-008-p57s2W61-Tm;ustanovení-> a-zakon.iso-008-p57s2W67-Tm;a)</spy_move>
+                          <spy_afun> (Sb -> Atr)</spy_afun>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node66">
+                          <m.rf>m#m-document_02_008-sentence1-node66</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>66</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node71">
+                          <m.rf>m#m-document_02_008-sentence1-node71</m.rf>
+                          <afun>Atr</afun>
+                          <is_member>1</is_member>
+                          <ord>71</ord>
+                          <children>
+                            <LM id="a-document_02_008-sentence1-node68">
+                              <m.rf>m#m-document_02_008-sentence1-node68</m.rf>
+                              <afun>Atr</afun>
+                              <ord>68</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node69">
+                              <m.rf>m#m-document_02_008-sentence1-node69</m.rf>
+                              <afun>Atr</afun>
+                              <ord>69</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence1-node70">
+                              <m.rf>m#m-document_02_008-sentence1-node70</m.rf>
+                              <afun>Atr</afun>
+                              <ord>70</ord>
+                            </LM>
+                          </children>
+                        </LM>
+                      </children>
+                      <spy_move> (a-zakon.iso-008-p57s2W41-Tm;zákona č. 117/1994 Sb., zákona č. 227/1997 Sb., zákona č. 492/2000 Sb., zákona č. 353/2001 Sb. a zákona č. 437/2003 Sb.-> a-zakon.iso-008-p57s2W61-Tm;ustanovení)</spy_move>
+                    </LM>
+                    <LM id="a-document_02_008-sentence1-node74">
+                      <m.rf>m#m-document_02_008-sentence1-node74</m.rf>
+                      <afun>Atr</afun>
+                      <ord>74</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence1-node72">
+                          <m.rf>m#m-document_02_008-sentence1-node72</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>72</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node73">
+                          <m.rf>m#m-document_02_008-sentence1-node73</m.rf>
+                          <afun>Sb</afun>
+                          <ord>73</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node75">
+                          <m.rf>m#m-document_02_008-sentence1-node75</m.rf>
+                          <afun>Obj</afun>
+                          <ord>75</ord>
+                          <children id="a-document_02_008-sentence1-node76">
+                            <m.rf>m#m-document_02_008-sentence1-node76</m.rf>
+                            <afun>AuxP</afun>
+                            <ord>76</ord>
+                            <children id="a-document_02_008-sentence1-node77">
+                              <m.rf>m#m-document_02_008-sentence1-node77</m.rf>
+                              <afun>Atr</afun>
+                              <ord>77</ord>
+                              <children id="a-document_02_008-sentence1-node79">
+                                <m.rf>m#m-document_02_008-sentence1-node79</m.rf>
+                                <afun>Atr</afun>
+                                <ord>79</ord>
+                                <children>
+                                  <LM id="a-document_02_008-sentence1-node78">
+                                    <m.rf>m#m-document_02_008-sentence1-node78</m.rf>
+                                    <afun>Atr</afun>
+                                    <ord>78</ord>
+                                  </LM>
+                                  <LM id="a-document_02_008-sentence1-node81">
+                                    <m.rf>m#m-document_02_008-sentence1-node81</m.rf>
+                                    <afun>AuxP</afun>
+                                    <ord>81</ord>
+                                    <children id="a-document_02_008-sentence1-node82">
+                                      <m.rf>m#m-document_02_008-sentence1-node82</m.rf>
+                                      <afun>Atr</afun>
+                                      <ord>82</ord>
+                                      <children id="a-document_02_008-sentence1-node83">
+                                        <m.rf>m#m-document_02_008-sentence1-node83</m.rf>
+                                        <afun>Atr</afun>
+                                        <ord>83</ord>
+                                        <children id="a-document_02_008-sentence1-node84">
+                                          <m.rf>m#m-document_02_008-sentence1-node84</m.rf>
+                                          <afun>AuxP</afun>
+                                          <ord>84</ord>
+                                          <children id="a-document_02_008-sentence1-node87">
+                                            <m.rf>m#m-document_02_008-sentence1-node87</m.rf>
+                                            <afun>Adv</afun>
+                                            <ord>87</ord>
+                                            <children>
+                                              <LM id="a-document_02_008-sentence1-node85">
+                                                <m.rf>m#m-document_02_008-sentence1-node85</m.rf>
+                                                <afun>Atr</afun>
+                                                <ord>85</ord>
+                                                <children id="a-document_02_008-sentence1-node86">
+                                                  <m.rf>m#m-document_02_008-sentence1-node86</m.rf>
+                                                  <afun>AuxG</afun>
+                                                  <ord>86</ord>
+                                                </children>
+                                              </LM>
+                                              <LM id="a-document_02_008-sentence1-node88">
+                                                <m.rf>m#m-document_02_008-sentence1-node88</m.rf>
+                                                <afun>Atr</afun>
+                                                <ord>88</ord>
+                                              </LM>
+                                            </children>
+                                          </children>
+                                        </children>
+                                      </children>
+                                      <spy_afun> (Adv -> Atr)</spy_afun>
+                                    </children>
+                                    <spy_move> (a-zakon.iso-008-p57s2W80-Tm;,-> a-zakon.iso-008-p57s2W61-Tm;ustanovení) (a-zakon.iso-008-p57s2W61-Tm;ustanovení-> a-zakon.iso-008-p57s2W79-Tm;účetnictví) (a-zakon.iso-008-p57s2W79-Tm;účetnictví-> a-zakon.iso-008-p57s2W74-Tm;upravují) (a-zakon.iso-008-p57s2W74-Tm;upravují-> a-zakon.iso-008-p57s2W67-Tm;a) (a-zakon.iso-008-p57s2W67-Tm;a-> a-zakon.iso-008-p57s2W79-Tm;účetnictví)</spy_move>
+                                  </LM>
+                                </children>
+                              </children>
+                            </children>
+                          </children>
+                        </LM>
+                        <LM id="a-document_02_008-sentence1-node80">
+                          <m.rf>m#m-document_02_008-sentence1-node80</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>80</ord>
+                          <spy_move> (a-zakon.iso-008-p57s2W74-Tm;upravují-> a-zakon.iso-008-p57s2W81-Tm;ve) (a-zakon.iso-008-p57s2W81-Tm;ve-> a-zakon.iso-008-p57s2W74-Tm;upravují)</spy_move>
+                        </LM>
+                      </children>
+                      <spy_move> (a-zakon.iso-008-p57s2W71-Tm;předpisů-> a-zakon.iso-008-p57s2W61-Tm;ustanovení)</spy_move>
+                    </LM>
+                  </children>
+                </LM>
+              </children>
+              <spy_move> (a-zakon.iso-008-p57s2W67-Tm;a-> a-zakon.iso-008-p57s2W30-Tm;mohou) (a-zakon.iso-008-p57s2W30-Tm;mohou-> a-zakon.iso-008-p57s2W55-Tm;;)</spy_move>
+            </LM>
+          </children>
+          <spy_move> (a-zakon.iso-008-p57s2;-> a-zakon.iso-008-p57s2W60-Tm;vztahují) (a-zakon.iso-008-p57s2W60-Tm;vztahují-> a-zakon.iso-008-p57s2W43-Tm;pokud) (a-zakon.iso-008-p57s2W43-Tm;pokud -> a-zakon.iso-008-p57s2;)</spy_move>
+          <spy_afun> (ExD -> AuxG) (AuxG -> Coord)</spy_afun>
+        </LM>
+        <LM id="a-document_02_008-sentence1-node89">
+          <m.rf>m#m-document_02_008-sentence1-node89</m.rf>
+          <afun>AuxK</afun>
+          <ord>89</ord>
+        </LM>
+      </children>
+    </LM>
+    <LM id="a-document_02_008-sentence2">
+      <s.rf>m#m-document_02_008-sentence2</s.rf>
+      <ord>0</ord>
+      <children id="a-document_02_008-sentence2-node1">
+        <m.rf>m#m-document_02_008-sentence2-node1</m.rf>
+        <afun>ExD</afun>
+        <ord>1</ord>
+      </children>
+    </LM>
+    <LM id="a-document_02_008-sentence3">
+      <s.rf>m#m-document_02_008-sentence3-section0</s.rf>
+      <ord>0</ord>
+      <children>
+        <LM id="a-document_02_008-sentence3-section0-node1">
+          <m.rf>m#m-document_02_008-sentence3-section0-node1</m.rf>
+          <afun>Pred</afun>
+          <ord>1</ord>
+          <children>
+            <LM id="a-document_02_008-sentence3-section0-node2">
+              <m.rf>m#m-document_02_008-sentence3-section0-node2</m.rf>
+              <afun>AuxR</afun>
+              <ord>2</ord>
+              <spy_afun> (AuxT -> AuxR)</spy_afun>
+            </LM>
+            <LM id="a-document_02_008-sentence3-section3-node11">
+              <m.rf>m#m-document_02_008-sentence3-section3-node11</m.rf>
+              <afun>Coord</afun>
+              <ord>38</ord>
+              <children>
+                <LM id="a-document_02_008-sentence3-section3-node3">
+                  <m.rf>m#m-document_02_008-sentence3-section3-node3</m.rf>
+                  <afun>Sb</afun>
+                  <is_member>1</is_member>
+                  <ord>30</ord>
+                  <children>
+                    <LM id="a-document_02_008-sentence3-section3-node1">
+                      <m.rf>m#m-document_02_008-sentence3-section3-node1</m.rf>
+                      <afun>AuxG</afun>
+                      <ord>28</ord>
+                      <children id="a-document_02_008-sentence3-section3-node2">
+                        <m.rf>m#m-document_02_008-sentence3-section3-node2</m.rf>
+                        <afun>AuxG</afun>
+                        <ord>29</ord>
+                      </children>
+                      <spy_afun> (Atr -> AuxG)</spy_afun>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section3-node5">
+                      <m.rf>m#m-document_02_008-sentence3-section3-node5</m.rf>
+                      <afun>Atr</afun>
+                      <ord>32</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence3-section3-node4">
+                          <m.rf>m#m-document_02_008-sentence3-section3-node4</m.rf>
+                          <afun>Atr</afun>
+                          <ord>31</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section3-node6">
+                          <m.rf>m#m-document_02_008-sentence3-section3-node6</m.rf>
+                          <afun>Atr</afun>
+                          <ord>33</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section3-node7">
+                          <m.rf>m#m-document_02_008-sentence3-section3-node7</m.rf>
+                          <afun>Atr</afun>
+                          <ord>34</ord>
+                        </LM>
+                      </children>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section3-node9">
+                      <m.rf>m#m-document_02_008-sentence3-section3-node9</m.rf>
+                      <afun>AuxP</afun>
+                      <ord>36</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence3-section3-node8">
+                          <m.rf>m#m-document_02_008-sentence3-section3-node8</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>35</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section3-node10">
+                          <m.rf>m#m-document_02_008-sentence3-section3-node10</m.rf>
+                          <afun>Atr</afun>
+                          <ord>37</ord>
+                          <spy_afun> (Obj -> Atr)</spy_afun>
+                        </LM>
+                      </children>
+                    </LM>
+                  </children>
+                  <spy_move> (a-zakon.iso-008-p58s4-2;-> a-zakon.iso-008-p58s4-2W11-Tm;,)</spy_move>
+                  <spy_afun> (ExD -> Sb)</spy_afun>
+                </LM>
+                <LM id="a-document_02_008-sentence3-section4-node3">
+                  <m.rf>m#m-document_02_008-sentence3-section4-node3</m.rf>
+                  <afun>Sb</afun>
+                  <is_member>1</is_member>
+                  <ord>41</ord>
+                  <children>
+                    <LM id="a-document_02_008-sentence3-section4-node1">
+                      <m.rf>m#m-document_02_008-sentence3-section4-node1</m.rf>
+                      <afun>AuxG</afun>
+                      <ord>39</ord>
+                      <children id="a-document_02_008-sentence3-section4-node2">
+                        <m.rf>m#m-document_02_008-sentence3-section4-node2</m.rf>
+                        <afun>AuxG</afun>
+                        <ord>40</ord>
+                      </children>
+                      <spy_afun> (Atr -> AuxG)</spy_afun>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section4-node5">
+                      <m.rf>m#m-document_02_008-sentence3-section4-node5</m.rf>
+                      <afun>Atr</afun>
+                      <ord>43</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence3-section4-node4">
+                          <m.rf>m#m-document_02_008-sentence3-section4-node4</m.rf>
+                          <afun>Atr</afun>
+                          <ord>42</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section4-node6">
+                          <m.rf>m#m-document_02_008-sentence3-section4-node6</m.rf>
+                          <afun>Atr</afun>
+                          <ord>44</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section4-node7">
+                          <m.rf>m#m-document_02_008-sentence3-section4-node7</m.rf>
+                          <afun>Atr</afun>
+                          <ord>45</ord>
+                        </LM>
+                      </children>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section4-node9">
+                      <m.rf>m#m-document_02_008-sentence3-section4-node9</m.rf>
+                      <afun>AuxP</afun>
+                      <ord>47</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence3-section4-node8">
+                          <m.rf>m#m-document_02_008-sentence3-section4-node8</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>46</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section4-node10">
+                          <m.rf>m#m-document_02_008-sentence3-section4-node10</m.rf>
+                          <afun>Atr</afun>
+                          <ord>48</ord>
+                          <spy_afun> (Obj -> Atr)</spy_afun>
+                        </LM>
+                      </children>
+                    </LM>
+                  </children>
+                  <co_parent.tree>5</co_parent.tree>
+                  <co_parent.lemma>,</co_parent.lemma>
+                  <co_parent.rf>a-zakon.iso-008-p58s4-2W11-Tm</co_parent.rf>
+                  <spy_afun> (ExD -> Sb)</spy_afun>
+                </LM>
+                <LM id="a-document_02_008-sentence3-section2-node13">
+                  <m.rf>m#m-document_02_008-sentence3-section2-node13</m.rf>
+                  <afun>AuxX</afun>
+                  <ord>27</ord>
+                  <co_parent.tree>5</co_parent.tree>
+                  <co_parent.lemma>,</co_parent.lemma>
+                  <co_parent.rf>a-zakon.iso-008-p58s4-2W11-Tm</co_parent.rf>
+                  <spy_afun> (AuxK -> AuxX)</spy_afun>
+                </LM>
+                <LM id="a-document_02_008-sentence3-section2-node3">
+                  <m.rf>m#m-document_02_008-sentence3-section2-node3</m.rf>
+                  <afun>Sb</afun>
+                  <is_member>1</is_member>
+                  <ord>17</ord>
+                  <children>
+                    <LM id="a-document_02_008-sentence3-section2-node1">
+                      <m.rf>m#m-document_02_008-sentence3-section2-node1</m.rf>
+                      <afun>AuxG</afun>
+                      <ord>15</ord>
+                      <children id="a-document_02_008-sentence3-section2-node2">
+                        <m.rf>m#m-document_02_008-sentence3-section2-node2</m.rf>
+                        <afun>AuxG</afun>
+                        <ord>16</ord>
+                      </children>
+                      <spy_afun> (Atr -> AuxG)</spy_afun>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section2-node5">
+                      <m.rf>m#m-document_02_008-sentence3-section2-node5</m.rf>
+                      <afun>Atr</afun>
+                      <ord>19</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence3-section2-node4">
+                          <m.rf>m#m-document_02_008-sentence3-section2-node4</m.rf>
+                          <afun>Atr</afun>
+                          <ord>18</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section2-node6">
+                          <m.rf>m#m-document_02_008-sentence3-section2-node6</m.rf>
+                          <afun>Atr</afun>
+                          <ord>20</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section2-node7">
+                          <m.rf>m#m-document_02_008-sentence3-section2-node7</m.rf>
+                          <afun>Atr</afun>
+                          <ord>21</ord>
+                        </LM>
+                      </children>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section2-node9">
+                      <m.rf>m#m-document_02_008-sentence3-section2-node9</m.rf>
+                      <afun>AuxP</afun>
+                      <ord>23</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence3-section2-node8">
+                          <m.rf>m#m-document_02_008-sentence3-section2-node8</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>22</ord>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section2-node10">
+                          <m.rf>m#m-document_02_008-sentence3-section2-node10</m.rf>
+                          <afun>Atr</afun>
+                          <ord>24</ord>
+                          <children id="a-document_02_008-sentence3-section2-node12">
+                            <m.rf>m#m-document_02_008-sentence3-section2-node12</m.rf>
+                            <afun>Atr</afun>
+                            <ord>26</ord>
+                            <children id="a-document_02_008-sentence3-section2-node11">
+                              <m.rf>m#m-document_02_008-sentence3-section2-node11</m.rf>
+                              <afun>Atr</afun>
+                              <ord>25</ord>
+                            </children>
+                          </children>
+                          <spy_afun> (Obj -> Atr)</spy_afun>
+                        </LM>
+                      </children>
+                    </LM>
+                  </children>
+                  <co_parent.tree>5</co_parent.tree>
+                  <co_parent.lemma>,</co_parent.lemma>
+                  <co_parent.rf>a-zakon.iso-008-p58s4-2W11-Tm</co_parent.rf>
+                  <spy_afun> (ExD -> Sb)</spy_afun>
+                </LM>
+                <LM id="a-document_02_008-sentence3-section1-node12">
+                  <m.rf>m#m-document_02_008-sentence3-section1-node12</m.rf>
+                  <afun>AuxX</afun>
+                  <ord>14</ord>
+                  <co_parent.tree>5</co_parent.tree>
+                  <co_parent.lemma>,</co_parent.lemma>
+                  <co_parent.rf>a-zakon.iso-008-p58s4-2W11-Tm</co_parent.rf>
+                  <spy_afun> (AuxK -> AuxX)</spy_afun>
+                </LM>
+                <LM id="a-document_02_008-sentence3-section1-node3">
+                  <m.rf>m#m-document_02_008-sentence3-section1-node3</m.rf>
+                  <afun>Sb</afun>
+                  <is_member>1</is_member>
+                  <ord>5</ord>
+                  <children>
+                    <LM id="a-document_02_008-sentence3-section1-node1">
+                      <m.rf>m#m-document_02_008-sentence3-section1-node1</m.rf>
+                      <afun>AuxG</afun>
+                      <ord>3</ord>
+                      <children id="a-document_02_008-sentence3-section1-node2">
+                        <m.rf>m#m-document_02_008-sentence3-section1-node2</m.rf>
+                        <afun>AuxG</afun>
+                        <ord>4</ord>
+                      </children>
+                      <spy_afun> (Atr -> AuxG)</spy_afun>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section1-node4">
+                      <m.rf>m#m-document_02_008-sentence3-section1-node4</m.rf>
+                      <afun>Atr</afun>
+                      <ord>6</ord>
+                      <children id="a-document_02_008-sentence3-section1-node5">
+                        <m.rf>m#m-document_02_008-sentence3-section1-node5</m.rf>
+                        <afun>Atr</afun>
+                        <ord>7</ord>
+                      </children>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section1-node6">
+                      <m.rf>m#m-document_02_008-sentence3-section1-node6</m.rf>
+                      <afun>Atr</afun>
+                      <ord>8</ord>
+                      <spy_move> (a-zakon.iso-008-p58s3-1W5-Tm;ČSSR-> a-zakon.iso-008-p58s3-1W3-Tm;nařízení)</spy_move>
+                    </LM>
+                    <LM id="a-document_02_008-sentence3-section1-node8">
+                      <m.rf>m#m-document_02_008-sentence3-section1-node8</m.rf>
+                      <afun>AuxP</afun>
+                      <ord>10</ord>
+                      <children>
+                        <LM id="a-document_02_008-sentence3-section1-node7">
+                          <m.rf>m#m-document_02_008-sentence3-section1-node7</m.rf>
+                          <afun>AuxX</afun>
+                          <ord>9</ord>
+                          <spy_move> (a-zakon.iso-008-p58s3-1W3-Tm;nařízení-> a-zakon.iso-008-p58s3-1W8-Tm;o)</spy_move>
+                          <spy_afun> (Coord -> AuxX)</spy_afun>
+                        </LM>
+                        <LM id="a-document_02_008-sentence3-section1-node10">
+                          <m.rf>m#m-document_02_008-sentence3-section1-node10</m.rf>
+                          <afun>Atr</afun>
+                          <ord>12</ord>
+                          <children>
+                            <LM id="a-document_02_008-sentence3-section1-node9">
+                              <m.rf>m#m-document_02_008-sentence3-section1-node9</m.rf>
+                              <afun>Atr</afun>
+                              <ord>11</ord>
+                            </LM>
+                            <LM id="a-document_02_008-sentence3-section1-node11">
+                              <m.rf>m#m-document_02_008-sentence3-section1-node11</m.rf>
+                              <afun>Atr</afun>
+                              <ord>13</ord>
+                            </LM>
+                          </children>
+                          <spy_afun> (Obj -> Atr)</spy_afun>
+                        </LM>
+                      </children>
+                      <spy_move> (a-zakon.iso-008-p58s3-1W7-Tm;,-> a-zakon.iso-008-p58s3-1W3-Tm;nařízení)</spy_move>
+                    </LM>
+                  </children>
+                  <co_parent.tree>5</co_parent.tree>
+                  <co_parent.lemma>,</co_parent.lemma>
+                  <co_parent.rf>a-zakon.iso-008-p58s4-2W11-Tm</co_parent.rf>
+                  <spy_afun> (ExD -> Sb)</spy_afun>
+                </LM>
+              </children>
+              <co_parent.tree>2</co_parent.tree>
+              <co_parent.lemma>zrušovat</co_parent.lemma>
+              <co_parent.rf>a-zakon.iso-008-p58s2W1-Tm</co_parent.rf>
+              <spy_afun> (AuxK -> Coord)</spy_afun>
+            </LM>
+          </children>
+        </LM>
+        <LM id="a-document_02_008-sentence3-section4-node11">
+          <m.rf>m#m-document_02_008-sentence3-section4-node11</m.rf>
+          <afun>AuxK</afun>
+          <ord>49</ord>
+          <co_parent.tree>2</co_parent.tree>
+          <co_parent.rf>a-zakon.iso-008-p58s2</co_parent.rf>
+        </LM>
+      </children>
+    </LM>
+    <LM id="a-document_02_008-sentence4">
+      <s.rf>m#m-document_02_008-sentence4</s.rf>
+      <ord>0</ord>
+      <children id="a-document_02_008-sentence4-node1">
+        <m.rf>m#m-document_02_008-sentence4-node1</m.rf>
+        <afun>ExD</afun>
+        <ord>1</ord>
+      </children>
+    </LM>
+    <LM id="a-document_02_008-sentence5">
+      <s.rf>m#m-document_02_008-sentence5</s.rf>
+      <ord>0</ord>
+      <children>
+        <LM id="a-document_02_008-sentence5-node3">
+          <m.rf>m#m-document_02_008-sentence5-node3</m.rf>
+          <afun>Pred</afun>
+          <ord>3</ord>
+          <children>
+            <LM id="a-document_02_008-sentence5-node2">
+              <m.rf>m#m-document_02_008-sentence5-node2</m.rf>
+              <afun>Sb</afun>
+              <ord>2</ord>
+              <children id="a-document_02_008-sentence5-node1">
+                <m.rf>m#m-document_02_008-sentence5-node1</m.rf>
+                <afun>Atr</afun>
+                <ord>1</ord>
+              </children>
+            </LM>
+            <LM id="a-document_02_008-sentence5-node4">
+              <m.rf>m#m-document_02_008-sentence5-node4</m.rf>
+              <afun>Obj</afun>
+              <ord>4</ord>
+              <spy_afun> (Obj -> Adv) (Adv -> Obj)</spy_afun>
+            </LM>
+            <LM id="a-document_02_008-sentence5-node5">
+              <m.rf>m#m-document_02_008-sentence5-node5</m.rf>
+              <afun>Adv</afun>
+              <ord>5</ord>
+              <children id="a-document_02_008-sentence5-node8">
+                <m.rf>m#m-document_02_008-sentence5-node8</m.rf>
+                <afun>Atr</afun>
+                <ord>8</ord>
+                <children>
+                  <LM id="a-document_02_008-sentence5-node6">
+                    <m.rf>m#m-document_02_008-sentence5-node6</m.rf>
+                    <afun>Atr</afun>
+                    <ord>6</ord>
+                    <children id="a-document_02_008-sentence5-node7">
+                      <m.rf>m#m-document_02_008-sentence5-node7</m.rf>
+                      <afun>AuxG</afun>
+                      <ord>7</ord>
+                    </children>
+                  </LM>
+                  <LM id="a-document_02_008-sentence5-node9">
+                    <m.rf>m#m-document_02_008-sentence5-node9</m.rf>
+                    <afun>Atr</afun>
+                    <ord>9</ord>
+                  </LM>
+                </children>
+                <spy_afun> (Atr -> Adv) (Adv -> Atr)</spy_afun>
+              </children>
+              <spy_afun> (Obj -> Adv)</spy_afun>
+            </LM>
+          </children>
+        </LM>
+        <LM id="a-document_02_008-sentence5-node10">
+          <m.rf>m#m-document_02_008-sentence5-node10</m.rf>
+          <afun>AuxK</afun>
+          <ord>10</ord>
+          <spy_afun> (AuxK -> AuxX) (AuxX -> AuxK)</spy_afun>
+        </LM>
+      </children>
+    </LM>
+  </trees>
+</adata>
