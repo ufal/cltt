@@ -1491,7 +1491,7 @@
       </w.rf>
       <form>povinný</form>
       <lemma>povinný</lemma>
-      <tag>AAIS1----1A----</tag>
+      <tag>AAIS4----1A----</tag>
     </m>
     <m id="m-document_01_005-sentence4-section1-node3">
       <src.rf>tagger_m</src.rf>
@@ -1500,7 +1500,7 @@
       </w.rf>
       <form>audit</form>
       <lemma>audit</lemma>
-      <tag>NNIS1-----A----</tag>
+      <tag>NNIS4-----A----</tag>
     </m>
     <m id="m-document_01_005-sentence4-section1-node4">
       <src.rf>tagger_m</src.rf>
@@ -1547,7 +1547,7 @@
       </w.rf>
       <form>jiné</form>
       <lemma>jiný</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_01_005-sentence4-section2-node3">
       <src.rf>tagger_m</src.rf>
@@ -1556,7 +1556,7 @@
       </w.rf>
       <form>ověřovací</form>
       <lemma>ověřovací</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_01_005-sentence4-section2-node4">
       <src.rf>tagger_m</src.rf>
@@ -1565,7 +1565,7 @@
       </w.rf>
       <form>služby</form>
       <lemma>služba</lemma>
-      <tag>NNFP1-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_01_005-sentence4-section2-node5">
       <src.rf>tagger_m</src.rf>
@@ -1594,7 +1594,7 @@
       </w.rf>
       <form>daňové</form>
       <lemma>daňový</lemma>
-      <tag>AANS1----1A----</tag>
+      <tag>AANS4----1A----</tag>
     </m>
     <m id="m-document_01_005-sentence4-section3-node3">
       <src.rf>tagger_m</src.rf>
@@ -1603,7 +1603,7 @@
       </w.rf>
       <form>poradenství</form>
       <lemma>poradenství</lemma>
-      <tag>NNNS1-----A----</tag>
+      <tag>NNNS4-----A----</tag>
     </m>
     <m id="m-document_01_005-sentence4-section3-node4">
       <src.rf>tagger_m</src.rf>

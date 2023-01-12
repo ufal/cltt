@@ -396,7 +396,7 @@
       </w.rf>
       <form>právnické</form>
       <lemma>právnický</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section1-node3">
       <src.rf>tagger_m</src.rf>
@@ -405,7 +405,7 @@
       </w.rf>
       <form>osoby</form>
       <lemma>osoba</lemma>
-      <tag>NNFP1-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section1-node4">
       <src.rf>tagger_m</src.rf>
@@ -506,7 +506,7 @@
       </w.rf>
       <form>zahraniční</form>
       <lemma>zahraniční</lemma>
-      <tag>AAFS2----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section2-node3">
       <src.rf>tagger_m</src.rf>
@@ -515,7 +515,7 @@
       </w.rf>
       <form>osoby</form>
       <lemma>osoba</lemma>
-      <tag>NNFS2-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section2-node4">
       <src.rf>tagger_m</src.rf>
@@ -679,7 +679,7 @@
       </w.rf>
       <form>organizační</form>
       <lemma>organizační</lemma>
-      <tag>AAFS2----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section3-node3">
       <src.rf>tagger_m</src.rf>
@@ -688,7 +688,7 @@
       </w.rf>
       <form>složky</form>
       <lemma>složka</lemma>
-      <tag>NNFS2-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section3-node4">
       <src.rf>tagger_m</src.rf>
@@ -762,7 +762,7 @@
       </w.rf>
       <form>fyzické</form>
       <lemma>fyzický</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section4-node3">
       <src.rf>tagger_m</src.rf>
@@ -771,7 +771,7 @@
       </w.rf>
       <form>osoby</form>
       <lemma>osoba</lemma>
-      <tag>NNFP1-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section4-node4">
       <src.rf>tagger_m</src.rf>
@@ -881,7 +881,7 @@
       </w.rf>
       <form>ostatní</form>
       <lemma>ostatní</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section5-node3">
       <src.rf>tagger_m</src.rf>
@@ -890,7 +890,7 @@
       </w.rf>
       <form>fyzické</form>
       <lemma>fyzický</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section5-node4">
       <src.rf>tagger_m</src.rf>
@@ -899,7 +899,7 @@
       </w.rf>
       <form>osoby</form>
       <lemma>osoba</lemma>
-      <tag>NNFP1-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section5-node5">
       <src.rf>tagger_m</src.rf>
@@ -1379,7 +1379,7 @@
       </w.rf>
       <form>ostatní</form>
       <lemma>ostatní</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section6-node3">
       <src.rf>tagger_m</src.rf>
@@ -1388,7 +1388,7 @@
       </w.rf>
       <form>fyzické</form>
       <lemma>fyzický</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section6-node4">
       <src.rf>tagger_m</src.rf>
@@ -1397,7 +1397,7 @@
       </w.rf>
       <form>osoby</form>
       <lemma>osoba</lemma>
-      <tag>NNFP1-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section6-node5">
       <src.rf>tagger_m</src.rf>
@@ -1498,7 +1498,7 @@
       </w.rf>
       <form>ostatní</form>
       <lemma>ostatní</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section7-node3">
       <src.rf>tagger_m</src.rf>
@@ -1507,7 +1507,7 @@
       </w.rf>
       <form>fyzické</form>
       <lemma>fyzický</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section7-node4">
       <src.rf>tagger_m</src.rf>
@@ -1516,7 +1516,7 @@
       </w.rf>
       <form>osoby</form>
       <lemma>osoba</lemma>
-      <tag>NNFP1-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section7-node5">
       <src.rf>tagger_m</src.rf>
@@ -1833,7 +1833,7 @@
       </w.rf>
       <form>ostatní</form>
       <lemma>ostatní</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section8-node3">
       <src.rf>tagger_m</src.rf>
@@ -1842,7 +1842,7 @@
       </w.rf>
       <form>fyzické</form>
       <lemma>fyzický</lemma>
-      <tag>AAFP1----1A----</tag>
+      <tag>AAFP4----1A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section8-node4">
       <src.rf>tagger_m</src.rf>
@@ -1851,7 +1851,7 @@
       </w.rf>
       <form>osoby</form>
       <lemma>osoba</lemma>
-      <tag>NNFP1-----A----</tag>
+      <tag>NNFP4-----A----</tag>
     </m>
     <m id="m-document_02_001-sentence5-section8-node5">
       <src.rf>tagger_m</src.rf>
